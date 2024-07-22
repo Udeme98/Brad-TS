@@ -72,3 +72,38 @@ function noReturnValue(message: string | number) {
   console.log(message);
 }
 // noReturnValue("Hello world");
+
+//Interfaces- This is like a custom type or a specific structure to an object or a function
+interface UserInterface {
+  id: number;
+  firstName: string;
+}
+
+const user1: UserInterface = {
+  id: 1,
+  firstName: "Kyle",
+};
+
+//Difference between a 'type' and 'interface'
+// types can be used with primitive and union
+type Score = number | string;
+let player1: Score = 3;
+
+//Interfaces is best used with an 'object' type
+interface Sample {
+  readonly id: number; // sets this property to 'readonly'
+  someName: string;
+  age?: number; // ? makes the property 'optional'
+}
+let somebody1: Sample = {
+  id: 2,
+  someName: "Sam",
+};
+
+//function interface
+interface MathFunc {
+  (x: number, y: number): number;
+}
+
+const addNum2: MathFunc = (x: number, y: number): number => x + y;
+console.log(addNum2(23, 2));

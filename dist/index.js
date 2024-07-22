@@ -53,4 +53,14 @@ function addNum(x, y) {
 function noReturnValue(message) {
     console.log(message);
 }
-// noReturnValue("Hello world");
+const user1 = {
+    id: 1,
+    firstName: "Kyle",
+};
+let player1 = 3;
+let somebody1 = {
+    id: 2,
+    someName: "Sam",
+};
+const addNum2 = (x, y) => x + y;
+console.log(addNum2(23, 2));
