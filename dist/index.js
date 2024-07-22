@@ -29,3 +29,18 @@ var Direction1;
     Direction1[Direction1["West"] = 3] = "West";
 })(Direction1 || (Direction1 = {}));
 console.log(Direction1.South);
+//objects
+//method 1
+const user = {
+    id: 2,
+    surName: "Paul",
+};
+const firstUser = {
+    id: 1,
+    name: "Saul",
+};
+// console.log(firstUser);
+//Type assertion- This tells the compiler we want to treat an entity as a different type
+let cId = 2;
+let customerId = cId; //method 1: changes the type from 'any' to 'number'
+let customer2Id = cId; //method 2: changes the type from 'any' to 'number'
