@@ -104,6 +104,18 @@ let somebody1: Sample = {
 interface MathFunc {
   (x: number, y: number): number;
 }
-
 const addNum2: MathFunc = (x: number, y: number): number => x + y;
-console.log(addNum2(23, 2));
+// console.log(addNum2(23, 2));
+
+//Classes - used to create objects. constructors[method():function within a class)]
+class Person {
+  id: number;
+  randomName: string;
+
+  constructor(id: number, randomName: string) {
+    (this.id = id), (this.randomName = randomName);
+  }
+}
+
+const person1 = new Person(2, "Joe");
+console.log(person1);

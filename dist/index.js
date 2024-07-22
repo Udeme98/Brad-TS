@@ -63,4 +63,12 @@ let somebody1 = {
     someName: "Sam",
 };
 const addNum2 = (x, y) => x + y;
-console.log(addNum2(23, 2));
+// console.log(addNum2(23, 2));
+//Classes - used to create objects. constructors[method():function within a class)]
+class Person {
+    constructor(id, randomName) {
+        (this.id = id), (this.randomName = randomName);
+    }
+}
+const person1 = new Person(2, "Joe");
+console.log(person1);
