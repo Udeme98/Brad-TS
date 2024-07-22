@@ -60,3 +60,15 @@ const firstUser: User = {
 let cId: any = 2;
 let customerId = <number>cId; //method 1: changes the type from 'any' to 'number'
 let customer2Id = cId as number; //method 2: changes the type from 'any' to 'number'
+
+//functions
+function addNum(x: number, y: number): number {
+  return x + y;
+}
+// console.log(addNum(6, 7));
+
+//void - this is used when the function doesn't return a value
+function noReturnValue(message: string | number) {
+  console.log(message);
+}
+// noReturnValue("Hello world");
