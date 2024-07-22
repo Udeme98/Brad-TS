@@ -33,3 +33,25 @@ enum Direction1 {
   West,
 }
 console.log(Direction1.South);
+
+//objects
+//method 1
+const user: {
+  id: number;
+  surName: string;
+} = {
+  id: 2,
+  surName: "Paul",
+};
+
+//method 2
+type User = {
+  id: number;
+  name: string;
+};
+
+const firstUser: User = {
+  id: 1,
+  name: "Saul",
+};
+console.log(firstUser);
