@@ -20,3 +20,16 @@ employee = [
   [2, "Sam"],
   [3, "Pete"],
 ];
+
+//Unions - let's a particular variable hold more than one type
+let pId: string | number;
+pId = 4;
+
+//Enums(Enumerated type)- allows us define a set of named constant(number or string)
+enum Direction1 {
+  North, // 0 by default
+  East,
+  South,
+  West,
+}
+console.log(Direction1.South);
