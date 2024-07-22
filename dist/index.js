@@ -69,6 +69,31 @@ class Person {
     constructor(id, randomName) {
         (this.id = id), (this.randomName = randomName);
     }
+    register() {
+        return `${this.randomName} is now registered`;
+    }
 }
 const person1 = new Person(2, "Joe");
+console.log(person1.register());
 console.log(person1);
+//Extending a class (subclass)
+class Employee extends Person {
+    constructor(id, randomName, position) {
+        super(id, randomName);
+        this.position = position;
+    }
+}
+class People {
+    constructor(id, nname) {
+        (this.id = id), (this.nname = nname);
+    }
+    register() {
+        return `I am ${this.nname}`;
+    }
+}
+//Generics - Used to build reusable components
+function getArray(items) {
+    return new Array().concat(items);
+}
+let numArray = getArray([1, 2, 3]);
+let strArray = getArray(["jon", "sol"]);

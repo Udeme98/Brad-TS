@@ -115,7 +115,50 @@ class Person {
   constructor(id: number, randomName: string) {
     (this.id = id), (this.randomName = randomName);
   }
+
+  register() {
+    return `${this.randomName} is now registered`;
+  }
 }
 
 const person1 = new Person(2, "Joe");
+console.log(person1.register());
 console.log(person1);
+
+//Extending a class (subclass)
+class Employee extends Person {
+  position: string;
+
+  constructor(id: number, randomName: string, position: string) {
+    super(id, randomName);
+    this.position = position;
+  }
+}
+
+//using an interface in a class
+interface PersonInterface {
+  id: number;
+  nname: string;
+  register(): string;
+}
+
+class People implements PersonInterface {
+  id: number;
+  nname: string;
+
+  constructor(id: number, nname: string) {
+    (this.id = id), (this.nname = nname);
+  }
+
+  register(): string {
+    return `I am ${this.nname}`;
+  }
+}
+
+//Generics - Used to build reusable components
+function getArray<T>(items: T[]): T[] {
+  return new Array().concat(items);
+}
+
+let numArray = getArray<number>([1, 2, 3]);
+let strArray = getArray<string>(["jon", "sol"]);
